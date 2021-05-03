@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "enderpearl": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "equipment": {
+                "mainhand": {
+                  "tag": "gm4_throw_shamir:throwables"
+                },
+                "chest": {
+                  "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'throw'}}"
+                }
+              }
+            }
+          }
+        ],
+        "items": [
+          {
+            "tag": "gm4_throw_shamir:throwables"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "gm4_throw_shamir:throw"
+  }
+}
