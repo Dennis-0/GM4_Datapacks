@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "enderpearl": {
+    "throw_inv_change": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "player": [
@@ -8,26 +8,22 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
+              "flags": {
+                "is_sneaking": false,
+                "is_sprinting": false
+              },
               "equipment": {
-                "mainhand": {
-                  "tag": "gm4_throw_shamir:throwables"
-                },
                 "chest": {
                   "nbt": "{gm4_metallurgy:{has_shamir:1b,active_shamir:'throw'}}"
                 }
               }
             }
           }
-        ],
-        "items": [
-          {
-            "tag": "gm4_throw_shamir:throwables"
-          }
         ]
       }
     }
   },
   "rewards": {
-    "function": "gm4_throw_shamir:throw"
+    "function": "gm4_throw_shamir:check_throw"
   }
 }
